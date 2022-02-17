@@ -1,12 +1,16 @@
 <template>
   <header class="header">
-    <h1>Добавление товара</h1>
-    <!-- <select v-model="sortGoodsBy" @change="sortGoodList" name="sortGoods" id="sortGoods" class="select__sort">
-      <option value="default">По умолчанию</option>
-      <option value="name">По наименованию</option>
-      <option value="min">По убыванию цены</option>
-      <option value="max">По возрастанию цены</option>
-    </select> -->
+    <div class="header__search">
+      <input type="text" placeholder="Поиск по системе" />
+    </div>
+    <div class="header__user">
+      <div class="user">
+        <img class="user_logo" src="#" alt="user logo" />
+        <p class="user_name">Alexander C.</p>
+        <p class="user_position">Администратор</p>
+      </div>
+    </div>
+    <div class="header__breadcrumbs">Logo -> Опросы -> Добавить опрос</div>
   </header>
 </template>
 
@@ -31,9 +35,16 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 32px;
-  padding-bottom: 16px;
   box-sizing: border-box;
+  background-color: #7bae73;
+  height: 90px;
+  flex-wrap: wrap;
+  &__search {
+    width: 60%;
+    input {
+      width: 100%;
+    }
+  }
 }
 
 h1 {

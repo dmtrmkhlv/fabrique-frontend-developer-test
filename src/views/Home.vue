@@ -1,9 +1,11 @@
 <template>
   <div class="wrapper">
-    <Header />
-    <div class="main">
+    <div class="container">
       <Menu />
-      <div>Home</div>
+      <div class="main">
+        <Header />
+        <div class="main__content">Home</div>
+      </div>
     </div>
   </div>
 </template>
@@ -21,7 +23,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap");
 
 * {
@@ -38,18 +40,18 @@ export default {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
   background-color: #faf9f7;
 }
 
-.main {
+.container {
   display: flex;
   justify-content: space-between;
+  height: 100vh;
 }
 
-@media screen and (max-width: 720px) {
-  .main {
-    flex-wrap: wrap;
-  }
+.main {
+  display: block;
+  flex: 1;
+  padding: 0 5%;
 }
 </style>

@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Users from '../views/Users.vue'
 import Quiz from '../views/Quiz.vue'
-import Callcenter from '../views/Callcenter.vue'
-import Blacklist from '../views/Blacklist.vue'
+import CallCenter from '../views/CallCenter.vue'
+import BlackList from '../views/BlackList.vue'
 
 const routes = [
   {
@@ -23,13 +23,13 @@ const routes = [
   },
   {
     path: '/callcenter',
-    name: 'Callcenter',
-    component: Callcenter
+    name: 'CallCenter',
+    component: CallCenter
   },
   {
     path: '/blacklist',
-    name: 'Blacklist',
-    component: Blacklist
+    name: 'BlackList',
+    component: BlackList
   },
 ]
 
